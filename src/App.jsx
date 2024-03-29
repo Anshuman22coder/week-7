@@ -1,6 +1,7 @@
 import { RecoilRoot, useRecoilValue, useSetRecoilState } from "recoil";
 import CountAtom from "./store/atoms/count";
 import CountIsEven from "./store/selector/countIsEven";
+import Todo from "./components/Todo";
 
 //we can get the value of the selector function by using the useRecoilValue
 //useRecoilValue can take either an atom or the selector to return the value
@@ -11,6 +12,7 @@ function App() {
 		<div>
 			<RecoilRoot>
 				<Count />
+				<Todo />
 			</RecoilRoot>
 		</div>
 	);
@@ -18,7 +20,7 @@ function App() {
 
 function Count() {
 	return (
-		<div>
+		<div style={{ marginBottom: "3rem" }}>
 			<CountRenderer />
 			<Buttons />
 		</div>
@@ -27,11 +29,7 @@ function Count() {
 
 function CountRenderer() {
 	const count = useRecoilValue(CountAtom);
-
 	const countEven = useRecoilValue(CountIsEven);
-
-	console.log(countEven);
-
 	return (
 		<div>
 			<b>{count}</b>
@@ -46,7 +44,6 @@ function EvenCountRenderer() {
 
 function Buttons() {
 	const setCount = useSetRecoilState(CountAtom);
-	console.log(`button component rendering`);
 	return (
 		<div>
 			<button
