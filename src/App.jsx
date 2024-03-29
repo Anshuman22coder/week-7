@@ -1,7 +1,7 @@
 import { RecoilRoot, useRecoilValue, useSetRecoilState } from "recoil";
 import CountAtom from "./store/atoms/count";
 import CountIsEven from "./store/selector/countIsEven";
-import Todo from "./components/Todo";
+import Profile from "./components/ProfileAssnt1/Profile";
 
 //we can get the value of the selector function by using the useRecoilValue
 //useRecoilValue can take either an atom or the selector to return the value
@@ -12,7 +12,8 @@ function App() {
 		<div>
 			<RecoilRoot>
 				<Count />
-				<Todo />
+				<br />
+				<Profile />
 			</RecoilRoot>
 		</div>
 	);
