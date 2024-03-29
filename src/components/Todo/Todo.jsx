@@ -74,7 +74,8 @@ function TItem() {
 			</button>
 
 			<div className={styles.filtering}>
-				<input type="text" value={filter} onChange={handleFilter} />
+				<label htmlFor="Filter">Filter : </label>
+				<input type="text" value={filter} id="Filter" onChange={handleFilter} />
 			</div>
 		</div>
 	);
