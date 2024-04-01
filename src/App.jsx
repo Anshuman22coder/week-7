@@ -1,7 +1,10 @@
 import "./App.css";
 
 import { RecoilRoot } from "recoil";
-import GithubProfile from "./components/Assgmnt5_GithubProfileCard/GithubProfile";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import OtpLogin, {
+	OTPINPUTScreen,
+} from "./components/Assgmnt6_OTPlogin/OtpLogin";
 
 //we can get the value of the selector function by using the useRecoilValue
 //useRecoilValue can take either an atom or the selector to return the value
@@ -9,9 +12,12 @@ import GithubProfile from "./components/Assgmnt5_GithubProfileCard/GithubProfile
 function App() {
 	return (
 		<RecoilRoot>
-			<div id="appContainer">
-				<GithubProfile />
-			</div>
+			<Router>
+				<Routes>
+					<Route path="/" element={<OtpLogin />} />
+					<Route path="/otp" element={<OTPINPUTScreen />} />
+				</Routes>
+			</Router>
 		</RecoilRoot>
 	);
 }
