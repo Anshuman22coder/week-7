@@ -1,10 +1,7 @@
 import "./App.css";
 
 import { RecoilRoot } from "recoil";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import OtpLogin, {
-	OTPINPUTScreen,
-} from "./components/Assgmnt6_OTPlogin/OtpLogin";
+import Birthday from "./components/Assgmnt7_BirthdayCards/Birthday";
 
 //we can get the value of the selector function by using the useRecoilValue
 //useRecoilValue can take either an atom or the selector to return the value
@@ -12,12 +9,7 @@ import OtpLogin, {
 function App() {
 	return (
 		<RecoilRoot>
-			<Router>
-				<Routes>
-					<Route path="/" element={<OtpLogin />} />
-					<Route path="/otp" element={<OTPINPUTScreen />} />
-				</Routes>
-			</Router>
+			<Birthday />
 		</RecoilRoot>
 	);
 }
