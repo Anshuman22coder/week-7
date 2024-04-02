@@ -1,0 +1,39 @@
+.paragraphContainer {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(226, 197, 197);
+}
+
+input {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+
+button {
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 11px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(219, 164, 26);
+  border: none;
+}
+
+
+section {
+  margin-top: 1rem;
+  color: rgb(219, 164, 26);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 2rem;
+  width: 350px;
+  line-height: 3ch;
+  word-spacing: 1ch;
+  letter-spacing: 0.2ch;
+
+}

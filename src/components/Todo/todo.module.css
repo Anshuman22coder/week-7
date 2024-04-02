@@ -1,0 +1,76 @@
+.todoContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+  background-color: peachpuff;
+  color: brown;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+
+
+
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+}
+
+
+.inputGroup label {
+  min-width: 100px;
+}
+
+
+.todoContainer button {
+  margin-top: 1rem;
+  padding: 1rem;
+  color: white;
+  background-color: deeppink;
+  border-radius: 11px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes highlighter {
+  from {
+    transform: scale(0.95);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.todoContainer button:hover {
+  animation: highlighter 1s forwards;
+  transition: highlighter 2s ease-in-out;
+}
+
+
+.todoItemsDisplay {
+
+
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  background-color: rgb(9, 83, 29);
+  color: white;
+  gap: 0.75rem;
+  border-radius: 11px;
+  flex-direction: column;
+
+}
+
+.todoItemsDisplay div {
+  border: 1px solid white;
+  border-radius: 11px;
+  padding: 0.75rem;
+  display: grid;
+  place-items: center;
+  margin: 0
+}
