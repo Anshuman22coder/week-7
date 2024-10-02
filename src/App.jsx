@@ -28,11 +28,11 @@ function CountRenderer() {
     <b>
       {count}
     </b>
-    <EvenCountRenderer2 />
+    <EvenCountRenderer/>
   </div>
 }
 
-function EvenCountRenderer2() {
+function EvenCountRenderer() {
   const isEven = useRecoilValue(evenSelector);
 
   return <div>
